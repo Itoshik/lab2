@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна №2 - Коти</title>
+    
+    <!-- Підключення зовнішнього CSS-файлу -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Стилі в секції заголовка -->
+    <style>
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+        .header {
+            background-color: lightblue;
+            padding: 20px;
+        }
+        
+        /* Стилі для чекбоксів */
+        .checkbox-container {
+            margin-bottom: 20px;
+            text-align: center; /* Щоб вирівняти по центру сторінки */
+        }
+
+        input[type="checkbox"] + label {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: lightgray;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        input[type="checkbox"]:checked + label {
+            background-color: lightgreen;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+        
+        /* Flexbox для контейнера */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 720px; /* Ширина всіх елементів */
+            margin: 0 auto; /* Центрування контейнера на сторінці */
+        }
+
+        .box {
+            width: 80px;
+            height: 150px;
+            margin: 5px;
+            position: relative; /* Для розміщення цифр */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box1 { background-color: green; }
+        .box2, .box3, .box4, .box5, .box6, .box7, .box8 { background-color: orange; }
+        .box9 { 
+            background-color: green; 
+            width: 100%; 
+            height: 100px;
+        }
+
+        .box span {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body style="background-color: #ffe5b4;">   
+
+    <!-- Блоковий елемент -->
+    <div class="header">
+        <h1>Лабораторна №2</h1>
+        <h2 style="color: rgb(255, 230, 3);">Світ котів</h2>
+    </div>
+
+    <!-- Текст про котів -->
+    <h3 style="color: darkred;">Чому ми любимо котів?</h3>
+    <p>Коти — це дивовижні тварини, які приносять радість та спокій у наші домівки. Вони мають неповторний характер та завжди знаходять спосіб зробити наше життя цікавішим.</p>
+    
+    <p style="border: 2px solid green; padding: 10px;">Коти відомі своїм спокійним характером, але водночас вони дуже активні та допитливі. Ці домашні тварини здатні завжди знаходити щось нове для себе, чи то грати з м’ячиком, чи просто спостерігати за птахами за вікном.</p>
+
+    
+
+    <!-- Елемент з позиціонуванням -->
+    <div id="positioned-element" style="position: absolute; top: 50px; right: 50px; background-color: #0284cf; padding: 10px; border: 2px solid #666;">
+        Елемент з властивістю position
+    </div>
+
+    <!-- Обтічний текст -->
+    <div class="float-container">
+        <img src="cat_image.jpg" alt="Фото кота" class="float-left" style="width: 150px; float: left; margin-right: 20px;">
+        <p>Коти — це найпопулярніші домашні тварини у світі. Їх індивідуальний характер, чарівна зовнішність та безмежна грайливість роблять їх ідеальними друзями для багатьох людей. Вони також дуже незалежні, що дає власникам більше свободи порівняно з іншими домашніми улюбленцями.</p>
+    </div>
+
+    <h3 style="color: darkgreen;">Корисні властивості котів</h3>
+    <ul style="background-color: #b0e0e6; padding: 20px;">
+        <li>Коти знижують рівень стресу.</li>
+        <li>Допомагають боротися з самотністю.</li>
+        <li>Коти створюють атмосферу затишку в домі.</li>
+        <li>Грайливість котів сприяє фізичній активності їх власників.</li>
+    </ul>
+<!-- Контейнер для чекбоксів -->
+<div class="checkbox-container">
+    <input type="checkbox" id="check1">
+    <label for="check1">Вибір 1</label>
+
+    <input type="checkbox" id="check2">
+    <label for="check2">Вибір 2</label>
+
+    <input type="checkbox" id="check3">
+    <label for="check3">Вибір 3</label>
+
+    <input type="checkbox" id="check4">
+    <label for="check4">Вибір 4</label>
+
+    <input type="checkbox" id="check5">
+    <label for="check5">Вибір 5</label>
+
+    <input type="checkbox" id="check6">
+    <label for="check6">Вибір 6</label>
+
+    <input type="checkbox" id="check7">
+    <label for="check7">Вибір 7</label>
+
+    <input type="checkbox" id="check8">
+    <label for="check8">Вибір 8</label>
+
+    <input type="checkbox" id="check9">
+    <label for="check9">Вибір 9</label>
+</div>
+
+<!-- Flexbox для розміщення елементів -->
+<div class="container">
+    <div class="box box1"><span>1</span></div>
+    <div class="box box2"><span>2</span></div>
+    <div class="box box3"><span>3</span></div>
+    <div class="box box4"><span>4</span></div>
+    <div class="box box5"><span>5</span></div>
+    <div class="box box6"><span>6</span></div>
+    <div class="box box7"><span>7</span></div>
+    <div class="box box8"><span>8</span></div>
+    <div class="box box9"><span>9</span></div>
+</div>
+    <!-- Інформація внизу сторінки -->
+    <div style="text-align: center;">
+        <img src="html-css.png" alt="HTML, CSS, JS" style="width: 150px; margin-top: 20px;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </div>
+
+</body>
+</html>

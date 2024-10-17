@@ -1,0 +1,50 @@
+/* Селектори тегів */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ffe5b4;
+}
+
+/* Селектори класів */
+.subtitle {
+    font-size: 1.2em;
+    color: darkgray;
+}
+
+/* Селектори ідентифікаторів */
+#positioned-element {
+    background-color: #a4d3ee;
+    padding: 15px;
+    border: 2px solid #666;
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    width: 250px;
+}
+
+/* Властивість float */
+.float-left {
+    float: left;
+    margin-right: 20px;
+    width: 150px;
+}
+
+/* Заголовки */
+h1 {
+    color: darkblue;
+}
+
+h2 {
+    color: orange;
+}
+
+h3 {
+    color: darkgreen;
+}
+
+/* Список */
+ul {
+    background-color: #b0e0e6;
+    padding: 20px;
+    border: 1px solid darkgreen;
+}
